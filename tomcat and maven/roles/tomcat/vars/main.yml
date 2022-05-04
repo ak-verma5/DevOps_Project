@@ -1,0 +1,4 @@
+JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz 
+dest_path: /opt/tomcat
+

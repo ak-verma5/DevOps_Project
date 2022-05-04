@@ -1,0 +1,14 @@
+- name: install pacakges
+  apt: 
+    name="{{item}}"  
+    state=present
+  loop:
+     - default-jdk
+     - python3-pip
+- name: donwload and extract maven
+  unarchive:
+     src: "{{maven_url}}"
+     dest: /opt
+     remote_src: yes
+- name: install maven
+  command: "update-alternatives --install /usr/bin/mvn maven /opt/apache-maven-3.8.5/bin/mvn 1001"
